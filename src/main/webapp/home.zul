@@ -1,0 +1,10 @@
+<zk>
+    <include src="menu.zul"/>
+    <window apply="org.zkoss.bind.BindComposer"
+                viewModel="@id('vm')@init('ua.rassokha.HomeViewModel')"
+                validationMessages="@id('vmsgs')">
+            <hlayout>Hello, <label value="@load(vm.username)" /></hlayout>
+    <button label="Log out" onClick="@command('logout')"/>
+
+    </window>
+</zk>

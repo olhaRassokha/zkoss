@@ -1,0 +1,9 @@
+<zk>
+    <include src="menu.zul"/>
+    <window apply="ua.rassokha.RegistrationComposer">
+        Username<textbox type="text" id="usernameText" constraint="no empty"/>
+        Password <textbox type="password" id="passwordText" constraint="no empty"/>
+                 <textbox type="password" id="passwordVerification" constraint="no empty"/>
+        <button id="register" label="Register"  onClick="@command('register')" />
+    </window>
+</zk>

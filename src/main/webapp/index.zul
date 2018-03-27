@@ -1,0 +1,36 @@
+<zk>
+	<style >
+		.parent {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		overflow: auto;
+		}
+
+		.block {
+		width: 250px;
+		height: 150px;
+		position: absolute;
+		top: 30%;
+		left: 40%;
+		background-color: lightblue;
+		text-align: center;
+		}
+		.z-textbox{
+		margin-top: 10pt;
+		}
+	</style>
+	<include src="menu.zul"/>
+	<div sclass="parent" apply="ua.rassokha.LoginComposer">
+		<div sclass="block">
+			<textbox type="text" id="usernameText" constraint="no empty"/>
+			<textbox type="password" id="passwordText" constraint="no empty"/>
+			<button id="loginButton" label="Log in"  onClick="@command('login')" />
+			<div visible="false" id="invalidPasswordOrUsername">
+			Invalid password or username.
+			</div>
+		</div>
+	</div>
+</zk>
