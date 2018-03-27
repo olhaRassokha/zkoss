@@ -57,8 +57,8 @@
     </role>
     <schema id="13" parent="2" name="public">
       <ObjectId>27709</ObjectId>
-      <IntrospectionTimestamp>2018-03-26.10:14:24.672</IntrospectionTimestamp>
-      <IntrospectionStateNumber>4428</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-03-27.21:50:24.879</IntrospectionTimestamp>
+      <IntrospectionStateNumber>4460</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -81,9 +81,9 @@
       <ObjectId>46049</ObjectId>
     </schema>
     <schema id="20" parent="2" name="users">
-      <ObjectId>46223</ObjectId>
-      <IntrospectionTimestamp>2018-03-27.10:52:58.589</IntrospectionTimestamp>
-      <IntrospectionStateNumber>4446</IntrospectionStateNumber>
+      <ObjectId>46232</ObjectId>
+      <IntrospectionTimestamp>2018-03-27.21:51:10.696</IntrospectionTimestamp>
+      <IntrospectionStateNumber>4461</IntrospectionStateNumber>
       <Visible>1</Visible>
     </schema>
     <sequence id="21" parent="13" name="category_sequance">
@@ -241,8 +241,8 @@
       <DataType>bigint</DataType>
     </sequence>
     <sequence id="43" parent="13" name="user_sequance">
-      <ObjectId>46074</ObjectId>
-      <StateNumber>4410</StateNumber>
+      <ObjectId>46233</ObjectId>
+      <StateNumber>4460</StateNumber>
       <SequenceIdentity>1</SequenceIdentity>
       <CacheSize>1</CacheSize>
       <DataType>bigint</DataType>
@@ -262,174 +262,164 @@
       <ObjectId>36464</ObjectId>
       <StateNumber>3664</StateNumber>
     </table>
-    <sequence id="47" parent="20" name="user_id_seq">
-      <ObjectId>46229</ObjectId>
-      <StateNumber>4447</StateNumber>
-      <SequenceIdentity>1</SequenceIdentity>
-      <CacheSize>1</CacheSize>
-      <DataType>bigint</DataType>
-    </sequence>
-    <table id="48" parent="20" name="user">
-      <ObjectId>46224</ObjectId>
-      <StateNumber>4443</StateNumber>
+    <table id="47" parent="20" name="user">
+      <ObjectId>46235</ObjectId>
+      <StateNumber>4461</StateNumber>
     </table>
-    <column id="49" parent="45" name="id">
+    <column id="48" parent="45" name="id">
       <Position>1</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>3667</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="50" parent="45" name="author">
+    <column id="49" parent="45" name="author">
       <Position>2</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>3667</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="51" parent="45" name="filename">
+    <column id="50" parent="45" name="filename">
       <Position>3</Position>
       <DataType>varchar(255)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>3667</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="52" parent="45" name="dateexecuted">
+    <column id="51" parent="45" name="dateexecuted">
       <Position>4</Position>
       <DataType>timestamp|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>3667</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="53" parent="45" name="orderexecuted">
+    <column id="52" parent="45" name="orderexecuted">
       <Position>5</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>3667</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="54" parent="45" name="exectype">
+    <column id="53" parent="45" name="exectype">
       <Position>6</Position>
       <DataType>varchar(10)|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>3667</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="55" parent="45" name="md5sum">
+    <column id="54" parent="45" name="md5sum">
       <Position>7</Position>
       <DataType>varchar(35)|0</DataType>
       <StateNumber>3667</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="56" parent="45" name="description">
+    <column id="55" parent="45" name="description">
       <Position>8</Position>
       <DataType>varchar(255)|0</DataType>
       <StateNumber>3667</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="57" parent="45" name="comments">
+    <column id="56" parent="45" name="comments">
       <Position>9</Position>
       <DataType>varchar(255)|0</DataType>
       <StateNumber>3667</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="58" parent="45" name="tag">
+    <column id="57" parent="45" name="tag">
       <Position>10</Position>
       <DataType>varchar(255)|0</DataType>
       <StateNumber>3667</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="59" parent="45" name="liquibase">
+    <column id="58" parent="45" name="liquibase">
       <Position>11</Position>
       <DataType>varchar(20)|0</DataType>
       <StateNumber>3667</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="60" parent="45" name="contexts">
+    <column id="59" parent="45" name="contexts">
       <Position>12</Position>
       <DataType>varchar(255)|0</DataType>
       <StateNumber>3667</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="61" parent="45" name="labels">
+    <column id="60" parent="45" name="labels">
       <Position>13</Position>
       <DataType>varchar(255)|0</DataType>
       <StateNumber>3667</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="62" parent="45" name="deployment_id">
+    <column id="61" parent="45" name="deployment_id">
       <Position>14</Position>
       <DataType>varchar(10)|0</DataType>
       <StateNumber>3667</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="63" parent="46" name="id">
+    <column id="62" parent="46" name="id">
       <Position>1</Position>
       <DataType>integer|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>3664</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="64" parent="46" name="locked">
+    <column id="63" parent="46" name="locked">
       <Position>2</Position>
       <DataType>boolean|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>3664</StateNumber>
       <TypeId>16</TypeId>
     </column>
-    <column id="65" parent="46" name="lockgranted">
+    <column id="64" parent="46" name="lockgranted">
       <Position>3</Position>
       <DataType>timestamp|0</DataType>
       <StateNumber>3664</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="66" parent="46" name="lockedby">
+    <column id="65" parent="46" name="lockedby">
       <Position>4</Position>
       <DataType>varchar(255)|0</DataType>
       <StateNumber>3664</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="67" parent="46" name="pk_databasechangeloglock">
+    <index id="66" parent="46" name="pk_databasechangeloglock">
       <ObjectId>36467</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="68" parent="46" name="pk_databasechangeloglock">
+    <key id="67" parent="46" name="pk_databasechangeloglock">
       <ObjectId>36468</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>pk_databasechangeloglock</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="69" parent="48" name="id">
+    <column id="68" parent="47" name="id">
       <Position>1</Position>
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>4446</StateNumber>
-      <DefaultExpression>nextval(&apos;users.user_id_seq&apos;::regclass)</DefaultExpression>
+      <StateNumber>4461</StateNumber>
+      <DefaultExpression>nextval(&apos;category_sequance&apos;::regclass)</DefaultExpression>
       <TypeId>20</TypeId>
-      <SequenceName>users.user_id_seq</SequenceName>
     </column>
-    <column id="70" parent="48" name="username">
+    <column id="69" parent="47" name="username">
       <Position>2</Position>
       <DataType>varchar(20)|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>4443</StateNumber>
+      <StateNumber>4461</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="71" parent="48" name="password">
+    <column id="70" parent="47" name="password">
       <Position>3</Position>
       <DataType>varchar(60)|0</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>4443</StateNumber>
+      <StateNumber>4461</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="72" parent="48" name="user_pkey">
-      <ObjectId>46227</ObjectId>
+    <index id="71" parent="47" name="user_pkey">
+      <ObjectId>46239</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="73" parent="48" name="user_pkey">
-      <ObjectId>46228</ObjectId>
+    <key id="72" parent="47" name="user_pkey">
+      <ObjectId>46240</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>user_pkey</UnderlyingIndexName>
       <Primary>1</Primary>

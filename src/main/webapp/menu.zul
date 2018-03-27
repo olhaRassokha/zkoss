@@ -1,12 +1,11 @@
 <zk>
-    <menubar apply="ua.rassokha.MenuComposer" id="menubar" autodrop="true">
-        <menu id="log in" label="Sing in/up" style="float: right">
+    <menubar apply="ua.rassokha.ui.MenuComposer" id="menubar" autodrop="true">
+        <menu id="login1" label="Sing in/up" style="float: right">
             <menupopup>
                 <menuitem id="login" label="Sing in"/>
                 <menuitem id="register" label="Sing up"/>
             </menupopup>
         </menu>
-        <menuitem visible="false" id="logout" style="float: right" label="Log out"/>
         <menuitem label="Welcome"/>
     </menubar>
 </zk>

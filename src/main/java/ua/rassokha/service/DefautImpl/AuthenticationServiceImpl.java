@@ -3,18 +3,19 @@ package ua.rassokha.service.DefautImpl;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.zkoss.zk.ui.Session;
 import org.zkoss.zk.ui.Sessions;
-import ua.rassokha.DAO.UserNotFoundException;
+import ua.rassokha.DAO.exeption.UserNotFoundException;
 import ua.rassokha.DAO.UserRepository;
 import ua.rassokha.domain.User;
 import ua.rassokha.service.AuthenticationService;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.sql.SQLException;
 
 public class AuthenticationServiceImpl implements AuthenticationService, Serializable {
     UserRepository userRepository = new UserRepository();
 
-    public boolean login(String username, String password) throws SQLException {
+    public boolean login(String username, String password) throws SQLException, IOException {
         if (username == null || password ==null) {
             return false;
         }
@@ -42,16 +43,16 @@ public class AuthenticationServiceImpl implements AuthenticationService, Seriali
     public User getUser() {
         Session sess = Sessions.getCurrent();
         User cre = (User) sess.getAttribute("user");
-        if (cre == null) {
-            cre = new User();// new a anonymous user and set to
-            // session
-            sess.setAttribute("user", cre);
-        }
         return cre;
     }
 
-    public User register(String username, String passsword) throws SQLException {
+    public User register(String username, String passsword) throws SQLException, IOException {
         return userRepository.save(new User(username,DigestUtils.md5Hex(passsword)));
     }
-
+    public boolean passwordMatches(String password, String passwordVerify){
+        if(password.equals(passwordVerify)){
+            return true;
+        }
+        return false;
+    }
 }

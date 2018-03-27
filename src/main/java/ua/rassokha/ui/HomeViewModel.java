@@ -1,4 +1,4 @@
-package ua.rassokha;
+package ua.rassokha.ui;
 
 import lombok.Data;
 import org.zkoss.bind.annotation.Command;

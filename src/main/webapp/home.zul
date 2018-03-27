@@ -1,10 +1,12 @@
+<?init class="ua.rassokha.ui.auth.AuthenticationInit"?>
 <zk>
-    <include src="menu.zul"/>
+    <menubar apply="ua.rassokha.ui.MenuComposer" id="menubar" autodrop="true">
+        <menuitem id="logout" style="float: right" label="Log out"/>
+        <menuitem label="Welcome"/>
+    </menubar>
     <window apply="org.zkoss.bind.BindComposer"
-                viewModel="@id('vm')@init('ua.rassokha.HomeViewModel')"
+                viewModel="@id('vm')@init('ua.rassokha.ui.HomeViewModel')"
                 validationMessages="@id('vmsgs')">
-            <hlayout>Hello, <label value="@load(vm.username)" /></hlayout>
-    <button label="Log out" onClick="@command('logout')"/>
-
+        <hlayout>Hello</hlayout>
     </window>
 </zk>

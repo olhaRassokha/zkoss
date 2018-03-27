@@ -1,4 +1,4 @@
-package ua.rassokha.DAO;
+package ua.rassokha.DAO.exeption;
 
 public class UserNotFoundException extends Exception {
 }

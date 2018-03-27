@@ -1,9 +1,39 @@
-<zk>
+<zk><style >
+    .parent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    }
+
+    .block {
+    width: 250px;
+    height: max-content;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    background-color: lightblue;
+    text-align: center;
+    }
+    .z-textbox{
+    margin-top: 10pt;
+    }
+</style>
     <include src="menu.zul"/>
-    <window apply="ua.rassokha.RegistrationComposer">
+    <div sclass="parent" apply="ua.rassokha.ui.RegistrationComposer">
+    <div sclass="block">
         Username<textbox type="text" id="usernameText" constraint="no empty"/>
         Password <textbox type="password" id="passwordText" constraint="no empty"/>
-                 <textbox type="password" id="passwordVerification" constraint="no empty"/>
+        Password   <textbox type="password" id="passwordVerification" constraint="no empty"/>
+        <div sclass="error" visible="false" id="passwordsDoNotMatches">
+            Passwords doesn't matches.
+        </div>
+        <div sclass="error" visible="false" id="someServerError">
+            Some server error occupied, please try again later.
+        </div>
         <button id="register" label="Register"  onClick="@command('register')" />
-    </window>
+    </div>
+    </div>
 </zk>

@@ -1,20 +1,21 @@
 package ua.rassokha.service;
 
-import ua.rassokha.DAO.UserNotFoundException;
+import ua.rassokha.DAO.exeption.UserNotFoundException;
 import ua.rassokha.domain.User;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public interface AuthenticationService {
 
-    /** login with account and password **/
-    public boolean login(String account, String password) throws SQLException, UserNotFoundException;
+    public boolean login(String account, String password) throws SQLException, UserNotFoundException, IOException;
 
-    /** logout current user **/
     public void logout();
 
-    /** get current user credential **/
     public User getUser();
 
-    User register(String value, String value1) throws SQLException;
-}
+    User register(String value, String value1) throws SQLException, IOException;
+
+    boolean passwordMatches(String password, String passwordVerify);
+
+    }

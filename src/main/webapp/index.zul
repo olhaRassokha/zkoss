@@ -11,7 +11,7 @@
 
 		.block {
 		width: 250px;
-		height: 150px;
+		height: max-content;
 		position: absolute;
 		top: 30%;
 		left: 40%;
@@ -21,16 +21,29 @@
 		.z-textbox{
 		margin-top: 10pt;
 		}
+		.error {
+		padding: 15px;
+		margin-bottom: 20px;
+		border: 1px solid transparent;
+		border-radius: 4px;
+		color: #a94442;
+		background-color: #f2dede;
+		border-color: #ebccd1;
+		}
+
 	</style>
 	<include src="menu.zul"/>
-	<div sclass="parent" apply="ua.rassokha.LoginComposer">
+	<div sclass="parent" apply="ua.rassokha.ui.LoginComposer">
 		<div sclass="block">
 			<textbox type="text" id="usernameText" constraint="no empty"/>
 			<textbox type="password" id="passwordText" constraint="no empty"/>
-			<button id="loginButton" label="Log in"  onClick="@command('login')" />
-			<div visible="false" id="invalidPasswordOrUsername">
-			Invalid password or username.
+			<div sclass="error" visible="false" id="invalidPasswordOrUsername">
+				Invalid password or username.
 			</div>
+			<div sclass="error" visible="false" id="someServerError">
+				Some server error occupied, please try again later.
+			</div>
+			<button id="loginButton" label="Log in"  onClick="@command('login')" />
 		</div>
 	</div>
 </zk>

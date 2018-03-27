@@ -37,6 +37,7 @@
           <element id="library" level="project" name="Maven: org.jooq:jooq-codegen:3.10.6" />
           <element id="library" level="project" name="Maven: postgresql:postgresql:9.1-901-1.jdbc4" />
           <element id="library" level="project" name="Maven: commons-codec:commons-codec:1.11" />
+          <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
         </element>
       </element>
       <element id="directory" name="META-INF">
